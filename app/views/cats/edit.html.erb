@@ -1,0 +1,34 @@
+<h1>Creating a new cat</h1>
+
+<form action= "<%= cat_url(@cat)%>" method="POST">
+    <input type="hidden" name="_method" value="PATCH">
+    <label for="name">Name : </label>
+    <input type="text" id ="name" name="cat[name]" value= "<%=@cat.name%>">
+    <br>
+    <br>
+    <input type="radio" id ="sex_m" name="cat[sex]" value="M" <%="checked" if @cat.sex == "M"%>>
+    <label for="sex_m">Male</label>
+    <input type="radio" id ="sex_f" name="cat[sex]" value="F" <%="checked" if @cat.sex == "F"%>>
+    <label for="sex_f">Female</label>
+    <br>
+    <br>
+    <label for="color">Color : </label>
+    <select name="cat[color]" id = "color">
+        <option disabled <%=@cat.color ? "" : selected%>> -- Chose a color -- </option>
+        <% Cat::CAT_COLORS.each do |color| %>
+        <option value = "<%=color%>" <%="selected" if @cat.color == color%>><%=color%></option>
+        <% end %>
+    </select>
+    <br><br>
+    <label for="date">Date : </label>
+    <input type="date" id="date" name = "cat[birth_date]" value = "<%=@cat.birth_date%>">
+    <br><br>
+    <label for="description">Description : </label>
+    <input type="textarea" id="description" name="cat[description]" value= "<%=@cat.description%>">
+    <br><br>
+
+    <input type="submit" value="Update Cat Info">
+
+</form>
+<br>
+<a href="<%=cats_url%>">Back to cats list</a>
