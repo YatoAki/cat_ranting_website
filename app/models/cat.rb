@@ -3,4 +3,6 @@ class Cat < ActiveRecord::Base
     validates :birth_date, :color, :name, :sex, :description, presence: true
     validates :color, inclusion: CAT_COLORS
     validates :sex, inclusion: %w(M F)
+
+    has_many :cat_rental_requests, dependent: :destroy
 end
