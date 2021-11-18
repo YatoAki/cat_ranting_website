@@ -1,24 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my first ruby on rails project at App Academy Open Bootcamp.
 
-Things you may want to cover:
+About the project
 
-* Ruby version
+  This is a cat renting website. The following functions are available.
+  
+  1. Upload a cat's details.
+  2. Request to rent cats that are uploaded.
+  3. Approve or deny the renting request.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Since this is a demo project, its functions and interface are only prototype.
